@@ -21,9 +21,7 @@ Depends on your OS's wordlist in `/usr/share/dict/words`. If you don't
 have one there (e.g., you're on Windows), or you want to use a wordlist
 that better matches the one used by the game you're cheating on, you'll
 need to edit the script. If you have no idea where to get a wordlist,
-SCOWL[] is a good place to start.
-
-    []: [http://wordlist.aspell.net/]
+[SCOWL](http://wordlist.aspell.net/) is a good place to start.
 
 The check is case-insensitive, so it will come up with matches like
 "bible" even though the BSD wordlist only has "Bible".
