@@ -68,7 +68,14 @@ If you wanted to build a web interface or something, the `ana` function
 that generates and filters permutations is reusable. So `import anamatch`
 and you can do the same thing the `__main__` bit does:
 
-    answers = set(words.intersection(ana(pattern, leftovers)))
+    with open('/usr/share/dict/words') as f:
+        words = {line.strip().lower() for line in f}
+    answers = words.intersection(ana(pattern, leftovers))
+
+If you want to iterate the matches instead of building a set, keep in
+mind that `itertools.permutations` doesn't care about element equality, 
+so `ayibbhd` will iterate over `baby` twice (once with the two `b`s in 
+the same order as in the letter set, once with them in the reverse order).
 
 # Implementation
 
